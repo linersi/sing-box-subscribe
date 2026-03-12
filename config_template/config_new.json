@@ -34,7 +34,7 @@
     {"tag": "🌐 Location", "type": "selector", "outbounds": ["{oracle}", "⚡自动选择", "🌀 Snippets", "🔷 Pages", "🎯 全球直连", "🛑 全球拦截"]},
     {"tag": "🍃 延迟辅助", "type": "urltest", "outbounds": ["{all}", "🚀 节点选择", "🎯 全球直连"], "url": "https://www.gstatic.com/generate_204", "interval": "1", "tolerance": 50, "idle_timeout": "2h"},
     {"tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["{oracle}", "⚡自动选择", "🚀 节点选择", "🌀 Snippets", "🔷 Pages", "🎯 全球直连"]},
-    {"tag": "🛑 广告拦截", "type": "selector", "outbounds": ["🎯 全球直连", "🛑 全球拦截"]},
+    {"tag": "🛑 广告拦截", "type": "selector", "outbounds": ["🛑 全球拦截", "🎯 全球直连"]},
     {"tag": "GLOBAL", "type": "selector", "outbounds": ["{oracle}", "⚡自动选择", "🌀 Snippets", "🔷 Pages", "🍃 延迟辅助", "🎯 全球直连"]},
     {"tag": "🎯 全球直连", "type": "direct"},
     {"tag": "🛑 全球拦截", "type": "block"}
