@@ -123,8 +123,10 @@
     "default_domain_resolver": {"server": "local"}
   },
   "inbounds": [
-    {"tag": "tun-in", "type": "tun", "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"], "mtu": 1500, "auto_route": true, "auto_redirect": true, "strict_route": true, "auto_redirect_input_mark": "0x2023", "auto_redirect_output_mark": "0x2024"},
-    {"tag": "mixed-in", "type": "mixed", "listen": "0.0.0.0", "listen_port": 7890}
+    {"tag": "tun-in", "type": "tun", "interface_name": "tun0", "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"], "mtu": 1500, "auto_route": false, "auto_redirect": false, "strict_route": false},
+    {"tag": "redirect-in", "type": "redirect", "listen": "0.0.0.0", "listen_port": 7892},
+    {"tag": "mixed-in", "type": "mixed", "listen": "0.0.0.0", "listen_port": 7890},
+    {"tag": "dns-in", "type": "direct", "listen": "0.0.0.0", "listen_port": 6053}
   ],
   "experimental": {
     "cache_file": {"enabled": true, "path": "/etc/momo/run/cache.db", "store_fakeip": true},
